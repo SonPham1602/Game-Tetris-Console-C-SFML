@@ -12,9 +12,15 @@ enum class TypeTile
 class Tile
 {
 private:
-	vector<Square> squares;
+	int SumSquares;
+	int a[4];
+	Square squares[4];
 	Texture texture;
 public:
 	Tile();
 	Tile(TypeTile type);
+	void MoveLeft();
+	void MoveRight();
+	void Fall();
+	void Spin();
 };

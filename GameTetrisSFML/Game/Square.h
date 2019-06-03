@@ -18,4 +18,5 @@ public:
 	void ChangeSquare(int c, int r);// thay doi
 	int GetColumn();// lay cot
 	int GetRow();// lay dong
+
 };
