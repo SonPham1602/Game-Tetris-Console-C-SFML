@@ -1,22 +1,26 @@
-#pragma once 
-#include <iostream>
-#include <vector>
 #include "Board.h"
-using namespace std;
-#include <SFML/Graphics.hpp>
-enum  class StateGame
+Board::Board()
 {
-	Pause,
-	Over,
-	InProcess
-};
-class GameController
+	//Khoi tao mang ban dau bang 0
+	for(int i=0;i<SumColumn;i++)
+	{
+		for(int j=0;j<SumRow;j++)
+		{
+			BoardTiles[i][j]=0;
+		}
+	}
+}
+void Board::ClearROw()
 {
-private:
-	int score;
-	int stateGame;
-public:
-	GameController();
-	void PauseGame();
-	void SaveGame();
-};
+
+}
+void Board::DrawTile(int x, int y)
+{
+	Texture tex;
+	tex.loadFromFile("C:\\Users\Welcome\Documents\GitHub\GameTetrisConsole\GameTetrisSFML\Asset\1.png");
+	Sprite s[4];
+	s[0].setTexture(tex);
+	s[1].setTexture(tex);
+	s[2].setTexture(tex);
+	s[3].setTexture(tex);
+}
