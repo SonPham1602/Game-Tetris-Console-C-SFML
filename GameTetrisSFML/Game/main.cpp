@@ -1,12 +1,21 @@
 #include <SFML/Graphics.hpp>
+#include <iostream>
 #include <vector>
-
+using namespace sf;
 int main()
 {
-	sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
+
 	sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 	std::vector<sf::Texture> Tiles;
+	Texture tex;
+	Sprite s;
+	tex.loadFromFile("C:\\Users\\Welcome\\Documents\\GitHub\\GameTetrisConsole\\GameTetrisSFML\\Asset\\Mockup\\background.jpg");
+	s.setTexture(tex);
+	s.setPosition(0, 0);
+	Vector2u sizeScreen = tex.getSize();
+	sf::RenderWindow window(sf::VideoMode(sizeScreen.x,sizeScreen.y), "SFML works!");
+
 	while (window.isOpen())
 	{
 		sf::Event event;
@@ -15,17 +24,11 @@ int main()
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
-		for(int i=0;i<10;i++)
-		{
-			for(int j = 0 ;j<10;j++)
-			{
-				window.draw()
-			}
-		}
 		window.clear();
-		window.draw(shape);
+		window.draw(s);
 		window.display();
 	}
+
 
 	return 0;
 }

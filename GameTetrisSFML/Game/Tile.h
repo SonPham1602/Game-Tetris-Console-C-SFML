@@ -12,6 +12,7 @@ enum class TypeTile
 class Tile
 {
 private:
+	TypeTile typeTile;
 	int SumSquares;
 	int a[4];
 	Square squares[4];
@@ -19,8 +20,8 @@ private:
 public:
 	Tile();
 	Tile(TypeTile type);
-	void MoveLeft();
-	void MoveRight();
-	void Fall();
-	void Spin();
+	void MoveLeft();// move left 
+	void MoveRight();// move right 
+	void Fall();// fall 
+	void Spin();// spin tile 
 };

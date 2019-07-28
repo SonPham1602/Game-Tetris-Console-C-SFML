@@ -1,6 +1,7 @@
 #include "Tile.h"
 Tile::Tile(TypeTile type)
 {
+	typeTile = type;
 	SumSquares = 4;//Khai bao so luong 
 	Square s1,s2,s3,s4;
 	squares[0] = s1;
@@ -67,5 +68,28 @@ void Tile::Fall()
 }
 void Tile::Spin()
 {
+	switch (typeTile)
+	{
+	case TypeTile::HinhVuong:
 
+		break;
+	case TypeTile::ThanhNgang:
+
+		break;
+	case TypeTile::ChuLXui:
+
+		break;
+	case TypeTile::ChuLNguoc:
+
+		break;
+	case TypeTile::ChuS:
+
+		break;
+	case TypeTile::ChuT:
+
+		break;
+	default:
+		break;
+	}
+	
 }

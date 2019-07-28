@@ -9,5 +9,6 @@ private:
 	int SumColumn;
 	int BoardTiles [20][15];
 public:
-
+	Board();
+	void ClearROw();
 };
