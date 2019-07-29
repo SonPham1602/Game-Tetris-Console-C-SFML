@@ -1,4 +1,5 @@
 #include "Board.h"
+
 Board::Board()
 {
 	//Khoi tao mang ban dau bang 0
@@ -23,4 +24,9 @@ void Board::DrawTile(int x, int y)
 	s[1].setTexture(tex);
 	s[2].setTexture(tex);
 	s[3].setTexture(tex);
+	for(int i=0;i<4;i++)
+	{
+		s[0].setPosition(113*3,113*5);
+
+	}
 }
