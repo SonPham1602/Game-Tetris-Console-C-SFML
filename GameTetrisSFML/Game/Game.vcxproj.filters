@@ -33,6 +33,12 @@
     <ClCompile Include="WindowGame.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="MouseGame.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundGame.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tile.h">
@@ -48,6 +54,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WindowGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundGame.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
