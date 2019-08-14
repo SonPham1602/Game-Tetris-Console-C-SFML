@@ -1,11 +1,12 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 #include <vector>
+#include "GameController.h"
 using namespace sf;
 int main()
 {
 
-	sf::CircleShape shape(100.f);
+	/*sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);
 	std::vector<sf::Texture> Tiles;
 	Texture tex;
@@ -18,17 +19,19 @@ int main()
 
 	while (window.isOpen())
 	{
-		sf::Event event;
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-				window.close();
-		}
-		window.clear();
-		window.draw(s);
-		window.display();
+	sf::Event event;
+	while (window.pollEvent(event))
+	{
+	if (event.type == sf::Event::Closed)
+	window.close();
 	}
-
+	window.clear();
+	window.draw(s);
+	window.display();
+	}
+	*/
+	GameController game;
+	game.CreateNewGame();
 
 	return 0;
 }

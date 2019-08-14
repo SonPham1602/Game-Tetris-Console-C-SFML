@@ -14,13 +14,14 @@ enum  class StateGame
 class GameController
 {
 private:
+	Board boardGame;
 	Texture t_Backgroud;
 	Sprite s_Backgroud;
 	WindowGame windowGame;
 	int score;
 	int stateGame;
 public:
-
+	void initBoardGame();
 	GameController();
 	void CreateNewGame();
 	void PauseGame();

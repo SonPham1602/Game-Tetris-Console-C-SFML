@@ -15,10 +15,10 @@ void Board::ClearROw()
 {
 
 }
-void Board::DrawTile(int x, int y)
+void Board::DrawTile(WindowGame *w,int x, int y)
 {
 	Texture tex;
-	tex.loadFromFile("C:\\Users\Welcome\Documents\GitHub\GameTetrisConsole\GameTetrisSFML\Asset\1.png");
+	tex.loadFromFile("C:\\Users\\Welcome\\Documents\\GitHub\\GameTetrisConsole\\GameTetrisSFML\\Asset\\1.png");
 	Sprite s[4];
 	s[0].setTexture(tex);
 	s[1].setTexture(tex);
@@ -26,7 +26,14 @@ void Board::DrawTile(int x, int y)
 	s[3].setTexture(tex);
 	for(int i=0;i<4;i++)
 	{
-		s[0].setPosition(113*3,113*5);
+		s[0].setTextureRect(sf::IntRect(0,0,1,1));
+		s[0].setPosition(0,0);
+		std::cout<<s[0].getTextureRect().width;
 
+
+	}
+	for(int i=0;i<4;i++)
+	{
+		w->Draw(s[0]);
 	}
 }

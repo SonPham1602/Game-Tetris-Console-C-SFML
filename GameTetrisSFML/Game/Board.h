@@ -3,6 +3,7 @@
 #include "Tile.h"
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include "WindowGame.h"
 using namespace std;
 
 class Board
@@ -15,5 +16,5 @@ private:
 public:
 	Board();
 	void ClearROw();
-	void DrawTile(int x, int y);
+	void DrawTile(WindowGame *w,int x, int y);
 };
