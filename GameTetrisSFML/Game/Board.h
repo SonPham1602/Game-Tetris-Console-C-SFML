@@ -17,4 +17,5 @@ public:
 	Board();
 	void ClearROw();
 	void DrawTile(WindowGame *w,int x, int y);
+	void DrawBlocks(WindowGame *w,vector<Tile> arrayTile);
 };

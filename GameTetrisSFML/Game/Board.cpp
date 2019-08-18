@@ -26,14 +26,21 @@ void Board::DrawTile(WindowGame *w,int x, int y)
 	s[3].setTexture(tex);
 	for(int i=0;i<4;i++)
 	{
-		s[0].setTextureRect(sf::IntRect(0,0,1,1));
 		s[0].setPosition(0,0);
-		std::cout<<s[0].getTextureRect().width;
-
-
 	}
 	for(int i=0;i<4;i++)
 	{
 		w->Draw(s[0]);
 	}
+}
+void Board::DrawBlocks(WindowGame *w,vector<Tile> arrayTile)
+{
+	if(!arrayTile.empty())
+	{
+		for(int i=0;i<ArrayOfTile.size();i++)
+		{
+			//w->Draw(arrayTile[i].)
+		}
+	}
+	
 }

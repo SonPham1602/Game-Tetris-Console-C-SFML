@@ -5,8 +5,10 @@ void GameController::CreateNewGame()
 	windowGame.SetUp("Tetris SONPHAM",GetSizeOfBackgroud());
 	while (windowGame.IsDone())
 	{
+		eventInputGame.SetWindow(&windowGame);
+		eventInputGame.CheckEvent();
 		windowGame.BeginDraw();
-		
+		//handleController->handleInput();
 		windowGame.Draw(s_Backgroud);
 
 		boardGame.DrawTile(&windowGame,1,1);
@@ -28,8 +30,13 @@ Vector2u GameController::GetSizeOfBackgroud()
 GameController::GameController()
 {
 	InitBackground();
+	handleController = new InputHandler();
 }
 void GameController::initBoardGame()
 {
 	boardGame.DrawTile(&windowGame,1,2);
+}
+GameController::~GameController()
+{
+
 }

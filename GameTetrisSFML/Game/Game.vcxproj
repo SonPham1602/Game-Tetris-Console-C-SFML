@@ -83,7 +83,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
+    <ClCompile Include="EventInput.cpp" />
     <ClCompile Include="GameController.cpp" />
+    <ClCompile Include="InputHandler.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MouseGame.cpp" />
     <ClCompile Include="SoundGame.cpp" />
@@ -93,7 +95,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
+    <ClInclude Include="EventInput.h" />
     <ClInclude Include="GameController.h" />
+    <ClInclude Include="InputHandler.h" />
     <ClInclude Include="MouseGame.h" />
     <ClInclude Include="SoundGame.h" />
     <ClInclude Include="Square.h" />

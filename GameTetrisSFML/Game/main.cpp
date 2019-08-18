@@ -2,9 +2,13 @@
 #include <iostream>
 #include <vector>
 #include "GameController.h"
+#include "InputHandler.h"
 using namespace sf;
+ 
+
 int main()
 {
+
 
 	/*sf::CircleShape shape(100.f);
 	shape.setFillColor(sf::Color::Green);

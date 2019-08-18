@@ -3,6 +3,8 @@
 #include <vector>
 #include "Board.h"
 #include "WindowGame.h"
+#include "InputHandler.h"
+#include "EventInput.h"
 using namespace std;
 #include <SFML/Graphics.hpp>
 enum  class StateGame
@@ -14,6 +16,8 @@ enum  class StateGame
 class GameController
 {
 private:
+	EventInputGame eventInputGame;
+	InputHandler *handleController;
 	Board boardGame;
 	Texture t_Backgroud;
 	Sprite s_Backgroud;
@@ -23,6 +27,7 @@ private:
 public:
 	void initBoardGame();
 	GameController();
+	~GameController();
 	void CreateNewGame();
 	void PauseGame();
 	void SaveGame();
