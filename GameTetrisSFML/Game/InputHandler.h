@@ -68,31 +68,7 @@ public:
 	Command * handleInput()
 	{
 		
-		switch (e->key.code)
-		{
-		case sf::Keyboard::A:
-			{
-				//std::cout<<"Press A/n";
-				return buttonRightAction;
-			}
-		case  sf::Keyboard::D:
-			{
-				//std::cout<<"Press D/n";
-				return buttonRightAction;
-			}
-		case sf::Keyboard::S:
-			{
-				//std::cout<<"Press S/n";
-				return buttonFallAction;
-			}
-		case  sf::Keyboard::W:
-			{
-				//std::cout<<"Press W/n";
-				return buttonSpinAction;
-			}
-		default:
-			break;
-		}
+		
 	};
 
 };

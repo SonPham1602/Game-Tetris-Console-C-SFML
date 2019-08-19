@@ -13,24 +13,25 @@ void EventInputGame::CheckEvent()
 		{
 			m_window->Destroy();
 		}
-		if(m_Event.type == sf::Event::Resized)
+		else if(m_Event.type == sf::Event::Resized)
 		{
 
 		}
-		if(m_Event.type == sf::Event::GainedFocus)
+		else if(m_Event.type == sf::Event::GainedFocus)
 		{
 
 		}
-		if(m_Event.type == sf::Event::LostFocus)
+		else if(m_Event.type == sf::Event::LostFocus)
 		{
 
 		}
-		if(m_Event.type == sf::Event::MouseMoved)
+		
+		else if(m_Event.type == sf::Event::MouseMoved)
 		{
 
 		}
-		typeInputMouse=TypeInPut::WAIT_MOUSE;
-		if(m_Event.type==sf::Event::MouseButtonPressed)
+		//typeInputMouse=TypeInPut::WAIT_MOUSE;
+		else if(m_Event.type==sf::Event::MouseButtonPressed)
 		{
 			if(m_Event.key.code==sf::Mouse::Left)
 			{
@@ -41,7 +42,7 @@ void EventInputGame::CheckEvent()
 				typeInputMouse=TypeInPut::RIGHT_MOUSE;
 			}
 		}
-		if(m_Event.type==sf::Event::KeyPressed)
+		else if(m_Event.type==sf::Event::KeyPressed)
 		{
 			switch (m_Event.key.code)
 			{

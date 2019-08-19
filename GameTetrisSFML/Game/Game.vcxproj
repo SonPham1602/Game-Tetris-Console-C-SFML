@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
+    <ClInclude Include="ButtonGame.h" />
     <ClInclude Include="EventInput.h" />
     <ClInclude Include="GameController.h" />
     <ClInclude Include="InputHandler.h" />

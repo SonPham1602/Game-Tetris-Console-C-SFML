@@ -74,5 +74,8 @@
     <ClInclude Include="EventInput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ButtonGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
