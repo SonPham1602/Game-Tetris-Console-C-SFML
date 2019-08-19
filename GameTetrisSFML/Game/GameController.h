@@ -5,6 +5,7 @@
 #include "WindowGame.h"
 #include "InputHandler.h"
 #include "EventInput.h"
+#include "MenuGame.h"
 using namespace std;
 #include <SFML/Graphics.hpp>
 enum  class StateGame
@@ -16,6 +17,7 @@ enum  class StateGame
 class GameController
 {
 private:
+	MainMenu *mainMenu;
 	EventInputGame eventInputGame;
 	InputHandler *handleController;
 	Board boardGame;

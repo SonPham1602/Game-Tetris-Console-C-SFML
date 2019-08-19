@@ -9,8 +9,8 @@ void GameController::CreateNewGame()
 		eventInputGame.CheckEvent();
 		windowGame.BeginDraw();
 		//handleController->handleInput();
-		windowGame.Draw(s_Backgroud);
-
+		//windowGame.Draw(s_Backgroud);
+		mainMenu->DrawMenu(&windowGame);
 		boardGame.DrawTile(&windowGame,1,1);
 		windowGame.EndDraw();
 	}
@@ -21,6 +21,8 @@ void GameController::InitBackground()
 {
 	t_Backgroud.loadFromFile("C:\\Users\\Welcome\\Documents\\GitHub\\GameTetrisConsole\\GameTetrisSFML\\Asset\\Mockup\\background.jpg");
 	s_Backgroud.setTexture(t_Backgroud);
+	mainMenu=new MainMenu();
+	mainMenu->InitMenu();
 	
 }
 Vector2u GameController::GetSizeOfBackgroud()
