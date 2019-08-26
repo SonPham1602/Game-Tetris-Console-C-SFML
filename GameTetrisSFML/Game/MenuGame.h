@@ -19,11 +19,12 @@ public:
 class MainMenu:public MenuGame
 {
 private:
+	
+public:
 	ButtonGame *playButtonGame;
 	ButtonGame *optionButtonGame;
 	ButtonGame *highScoreButtonGame;
 
-public:
 	void InitMenu();
 	void DrawMenu(WindowGame *w);
 };

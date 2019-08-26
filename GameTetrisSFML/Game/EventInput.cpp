@@ -62,13 +62,63 @@ void EventInputGame::CheckEvent()
 
 	}
 }
-void EventInputGame::CheckEvent(sf::Sprite &s)
+bool EventInputGame::CheckEvent(sf::Sprite &s)
 {
 	bool moving=false;
 	int dx,dy;
-
+	
 	while(m_window->GetWindowGame()->pollEvent(m_Event))
 	{
+		if(m_Event.type == sf::Event::Closed)
+		{
+			m_window->Destroy();
+		}
+		else if(m_Event.type == sf::Event::Resized)
+		{
+
+		}
+		else if(m_Event.type == sf::Event::GainedFocus)
+		{
+
+		}
+		else if(m_Event.type == sf::Event::LostFocus)
+		{
+
+		}
+
+		else if(m_Event.type == sf::Event::MouseMoved)
+		{
+
+		}
+		//typeInputMouse=TypeInPut::WAIT_MOUSE;
+		else if(m_Event.type==sf::Event::MouseButtonPressed)
+		{
+			if(m_Event.key.code==sf::Mouse::Left)
+			{
+				typeInputMouse=TypeInPut::LEFT_MOUSE;
+			}
+			else if(m_Event.key.code==sf::Mouse::Right)
+			{
+				typeInputMouse=TypeInPut::RIGHT_MOUSE;
+			}
+		}
+		else if(m_Event.type==sf::Event::KeyPressed)
+		{
+			switch (m_Event.key.code)
+			{
+			case sf::Keyboard::A:
+				std::cout<<"Press A \n";
+				break;
+			case sf::Keyboard::D:
+				std::cout<<"Press D \n";
+				break;
+			case sf::Keyboard::S:
+				std::cout<<"Press S \n";
+				break;
+			default:
+				break;
+			}
+		}
 		typeInputMouse=TypeInPut::WAIT_MOUSE;
 		if(m_Event.type==sf::Event::MouseButtonPressed)
 		{
@@ -84,6 +134,7 @@ void EventInputGame::CheckEvent(sf::Sprite &s)
 
 					dx=sf::Mouse::getPosition(*m_window->GetWindowGame()).x-s.getPosition().x;
 					dy=sf::Mouse::getPosition(*m_window->GetWindowGame()).y-s.getPosition().y;
+					return true;
 				}
 				else
 					typeInputMouse=TypeInPut::LEFT_MOUSE;
@@ -104,6 +155,7 @@ void EventInputGame::CheckEvent(sf::Sprite &s)
 		std::cout<<sf::Mouse::getPosition(*m_window->GetWindowGame()).x;
 
 	}
+	
 
 
 }

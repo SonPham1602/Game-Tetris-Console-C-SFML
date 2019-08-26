@@ -16,3 +16,7 @@ Sprite ButtonGame::GetSpite()
 {
 	return s_ButtonGame;
 }
+ButtonGame::ButtonGame()
+{
+
+}

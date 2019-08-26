@@ -27,9 +27,12 @@ private:
 	int score;
 	int stateGame;
 public:
+	
 	void initBoardGame();
 	GameController();
 	~GameController();
+	void ChangeBackground(WindowGame *w,string Path);
+	void StartNewGame();
 	void CreateNewGame();
 	void PauseGame();
 	void SaveGame();

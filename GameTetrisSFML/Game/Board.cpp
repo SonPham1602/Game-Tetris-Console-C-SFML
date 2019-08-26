@@ -3,13 +3,8 @@
 Board::Board()
 {
 	//Khoi tao mang ban dau bang 0
-	for(int i=0;i<SumColumn;i++)
-	{
-		for(int j=0;j<SumRow;j++)
-		{
-			BoardTiles[i][j]=0;
-		}
-	}
+	
+
 }
 void Board::ClearROw()
 {
@@ -42,5 +37,5 @@ void Board::DrawBlocks(WindowGame *w,vector<Tile> arrayTile)
 			//w->Draw(arrayTile[i].)
 		}
 	}
-	
+
 }

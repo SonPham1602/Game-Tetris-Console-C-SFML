@@ -17,5 +17,5 @@ public:
 	void SetWindow(WindowGame *w);// set window vao event
 	void CheckEvent();// kiem tra su kien la j 
 	sf::Event GetEvent();// lay su kien
-	void CheckEvent(sf::Sprite &s);
+	bool CheckEvent(sf::Sprite &s);
 };

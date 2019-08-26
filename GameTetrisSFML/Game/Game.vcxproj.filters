@@ -42,13 +42,13 @@
     <ClCompile Include="InputHandler.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="EventInput.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="ButtonGame.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
     <ClCompile Include="MenuGame.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EventInput.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
   </ItemGroup>

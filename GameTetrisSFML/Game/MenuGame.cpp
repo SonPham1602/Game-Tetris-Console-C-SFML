@@ -1,5 +1,9 @@
 #include "MenuGame.h"
 
+void Test()
+{
+	cout<<"Heelo";
+}
 void MainMenu::InitMenu()
 {
 	t_background.loadFromFile("C:\\Users\\Welcome\\Documents\\GitHub\\GameTetrisConsole\\GameTetrisSFML\\Asset\\Mockup\\Tetris.png");

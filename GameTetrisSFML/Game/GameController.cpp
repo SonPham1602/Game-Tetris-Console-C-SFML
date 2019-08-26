@@ -3,19 +3,33 @@ void GameController::CreateNewGame()
 {
 	windowGame.GetWindowGame()->setFramerateLimit(60);
 	windowGame.SetUp("Tetris SONPHAM",GetSizeOfBackgroud());
+	eventInputGame.SetWindow(&windowGame);
 	while (windowGame.IsDone())
 	{
-		eventInputGame.SetWindow(&windowGame);
-		eventInputGame.CheckEvent();
+	
+		
 		windowGame.BeginDraw();
+		//eventInputGame.CheckEvent();
+		if(eventInputGame.CheckEvent(mainMenu->playButtonGame->GetSpite())==true)
+		{
+			ChangeBackground(&windowGame,"C:\\Users\\Welcome\\Documents\\GitHub\\GameTetrisConsole\\GameTetrisSFML\\Asset\\Mockup\\background.jpg");
+		}
+		else
+		{
+			mainMenu->DrawMenu(&windowGame);
+		}
 		//handleController->handleInput();
 		//windowGame.Draw(s_Backgroud);
-		mainMenu->DrawMenu(&windowGame);
+		
 		boardGame.DrawTile(&windowGame,1,1);
 		windowGame.EndDraw();
 	}
 
 
+}
+void GameController::StartNewGame()
+{
+	cout<<"Start Game";
 }
 void GameController::InitBackground()
 {
@@ -41,4 +55,10 @@ void GameController::initBoardGame()
 GameController::~GameController()
 {
 
+}
+void GameController::ChangeBackground(WindowGame *w,string Path)
+{
+	t_Backgroud.loadFromFile(Path);
+	s_Backgroud.setTexture(t_Backgroud);
+	w->Draw(s_Backgroud);
 }

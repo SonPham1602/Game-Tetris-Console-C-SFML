@@ -17,7 +17,7 @@ public:
 	ButtonGame();
 	ButtonGame(string path,Vector2f pos);
 	ButtonGame(string path,Vector2i size,Vector2f pos,StateButton state);
-	void ClickButton();
+//	void (GameController::*Click)();
 	void Animation();
 	void SetPosition();
 	Sprite GetSpite();
